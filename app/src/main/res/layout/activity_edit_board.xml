@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".EditActivity">
+
+
+    <!--게시판 글 작성하는 페이지-->
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="input name"
+        android:inputType="text"
+        android:background="@drawable/bg_edit"
+        android:padding="10dp"/>  <!--android:ems="8"   가로넓이가 8글자수 들어가게-->
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input title"
+        android:inputType="text"
+        android:background="@drawable/bg_edit"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/et_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="input msg"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/bg_edit"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"/>  <!--android:layout_weight="1" : 혼자 나머지공간 다먹음-->
+    <!--android:gravity="top"  : 글씨가 위에서부터 써질수잇도록-->
+
+
+    <EditText
+        android:id="@+id/et_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input price"
+        android:inputType="number"
+        android:background="@drawable/bg_edit"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select image"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="right"
+        android:onClick="clickSelectImage"/>  <!--backgroundTint : 색 바꾸기/ background 로 하면 클릭기능이 없어짐-->
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_insert_photo_grey_40dp"
+        android:padding="8dp"
+        android:background="@drawable/bg_edit"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="complete"
+        android:onClick="clickComplete"/>
+
+
+
+
+</LinearLayout>
